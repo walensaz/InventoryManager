@@ -1,0 +1,8 @@
+8a:Steel Housings:890:0:0:N/A:200:39.99:Metals+
+5a:Steel (inches):557:0:0:N/A:100:15.99:Metals+
+SM5:Sheet Metal:417:83:0:N/A:500:12.99:Ryan
+3a:Screw:2468:0:4:N/A:500:3.99:Hammer Place
+1a:Nail:668:0:0:N/A:500:12.99:Nails+
+2a:Cylinder:395:205:0:N/A:600:16.99:Ace+
+99:Alex:210:90:0:N/A:300:12.99:Alexs+
+4a:Wood:1096:0:2:N/A:500:12.99:Woods+

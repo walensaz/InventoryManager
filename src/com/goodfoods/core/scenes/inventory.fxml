@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.goodfoods.core.scenes.InventoryController">
+  <tabs>
+    <Tab text="Inventory">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1920.0">
+               <children>
+                  <TableView fx:id="inventoryTable" prefHeight="863.0" prefWidth="1368.0">
+                    <columns>
+                        <TableColumn fx:id="partNumberColumn" prefWidth="133.00001525878906" text="Part Number" />
+                      <TableColumn fx:id="itemDescriptionColumn" prefWidth="149.0" text="Item Decription" />
+                      <TableColumn fx:id="quantityStatsColumn" minWidth="1.0000152587890625" prefWidth="250.0" text="Quantity Stats">
+                           <columns>
+                              <TableColumn fx:id="quantityHaveColumn" prefWidth="150.0" text="Quantity In House" />
+                              <TableColumn fx:id="quantityNeededColumn" prefWidth="140.0" text="Quantity Needed" />
+                              <TableColumn fx:id="quantityInUseColumn" prefWidth="140.0" text="Quantity In Use" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="PONumberColumn" prefWidth="110.0" text="PO Number" />
+                        <TableColumn fx:id="costColumn" prefWidth="117.0" text="Price" />
+                        <TableColumn fx:id="vendorColumn" prefWidth="187.0" text="Vendor" />
+                        <TableColumn fx:id="minQtyColumn" prefWidth="157.0" text="Minimum Quantity" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="newProductButton" layoutX="1604.0" layoutY="14.0" mnemonicParsing="false" onAction="#makeNewProductUI" prefHeight="50.0" prefWidth="136.0" text="New" />
+                  <Label fx:id="newProductName" contentDisplay="RIGHT" layoutX="1387.0" layoutY="246.0" text="Product Name:" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <TextField fx:id="newProductNameText" prefHeight="33.0" prefWidth="186.0" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="newProductNumber" contentDisplay="RIGHT" layoutX="1718.0" layoutY="246.0" prefHeight="33.0" prefWidth="171.0" text="Part Number:" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <TextField fx:id="newProductNumberText" prefHeight="33.0" prefWidth="58.0" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="newProductQuantity" contentDisplay="RIGHT" layoutX="1387.0" layoutY="297.0" prefHeight="33.0" prefWidth="185.0" text="Quantity:" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <TextField fx:id="newProductQuantityText" prefHeight="33.0" prefWidth="101.0" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="newProductPrice" contentDisplay="RIGHT" layoutX="1601.0" layoutY="297.0" prefHeight="33.0" prefWidth="142.0" text="Price:" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <TextField fx:id="newProductPriceText" prefHeight="33.0" prefWidth="88.0" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="newProductVendor" contentDisplay="RIGHT" layoutX="1387.0" layoutY="342.0" text="Vendor:" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <TextField fx:id="newProductVendorText" prefHeight="33.0" prefWidth="186.0" />
+                     </graphic>
+                  </Label>
+                  <Button fx:id="createProductButton" layoutX="1615.0" layoutY="471.0" mnemonicParsing="false" onAction="#makeNewProduct" prefHeight="50.0" prefWidth="136.0" text="New" visible="false" />
+                  <Label fx:id="errorText" layoutX="1406.0" layoutY="39.0" textFill="#bc0000" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Orders">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1920.0">
+               <children>
+                  <TableView fx:id="workOrderTable" prefHeight="863.0" prefWidth="1368.0">
+                     <columns>
+                        <TableColumn fx:id="workOrderIdColumn" prefWidth="133.00001525878906" text="Order ID" />
+                        <TableColumn fx:id="workItemIdColumn" prefWidth="157.0" text="Product ID" />
+                        <TableColumn fx:id="workDescriptionColumn" prefWidth="149.0" text="Item Description" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="newOrderButton" layoutX="1597.0" layoutY="36.0" mnemonicParsing="false" onAction="#makePopUp" text="New Order" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
